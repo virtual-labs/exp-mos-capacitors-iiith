@@ -14,9 +14,8 @@ A typical MOS capacitor consists of three layers:
 ### **Diagram**  
 Below is an example diagram of a MOS capacitor structure:
 
-![MOS Capacitor Diagram](moscap.jpg)  
+![MOS Capacitor Diagram](images/moscap.jpg)  
 
-*Note: Replace `moscap_image.png` with the actual file path of the image in your project directory.*
 
 ---
 
@@ -40,13 +39,13 @@ The MOS capacitor works by applying a voltage to the metal gate, which controls 
 
 ## **Key Parameters**  
 
-### **1. Threshold Voltage (\(V_{\text{th}}\))**  
+### **1. Threshold Voltage V_th**  
 The voltage at which inversion begins. It depends on:  
 - Work function difference between the metal and semiconductor.  
 - Doping concentration in the substrate.  
 - Oxide thickness.  
 
-### **2. Capacitance (\(C\))**  
+### **2. Capacitance C**  
 - **Accumulation and Inversion**: Capacitance is constant and determined by the oxide layer.  
 - **Depletion**: Capacitance decreases as the depletion region width increases.  
 
@@ -76,19 +75,16 @@ The voltage at which inversion begins. It depends on:
 
 ### **Capacitance**  
 
-The total capacitance of the MOS capacitor is given by:  
+The total capacitance can be expressed as:
 
-\[
-\frac{1}{C_{\text{total}}} = \frac{1}{C_{\text{ox}}} + \frac{1}{C_{\text{depl}}}
-\]  
+1 / C_total = 1 / C_ox + 1 / C_depl
 
-Where:  
-- \(C_{\text{total}}\): Total capacitance of the MOS capacitor.  
-- \(C_{\text{ox}}\): Capacitance due to the oxide layer.  
-- \(C_{\text{depl}}\): Capacitance due to the depletion region.  
+Where:
+-  C_total: Total capacitance of the MOS capacitor.
+-  C_ox: Capacitance due to the oxide layer.
+-  C_depl: Capacitance due to the depletion region.
 
----
-
+  ---
 ## **Applications**  
 
 1. **MOSFETs**: MOS capacitors form the gate structure in MOSFETs.  
