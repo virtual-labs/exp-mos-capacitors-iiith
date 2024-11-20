@@ -2,12 +2,46 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": " In which region of operation do minority carriers dominate near the oxide-semiconductor interface?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Accumulation",
+        "b": "Depletion",
+        "c": "Inversion",
+        "d": "Saturation"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " What determines the capacitance of the oxide layer in a MOS capacitor?",
+      "answers": {
+        "a": "Doping concentration of the semiconductor",
+        "b": "Thickness of the oxide layer and its permittivity",
+        "c": "Width of the depletion region",
+        "d": " Applied gate voltage"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens to the width of the depletion region when a positive gate voltage is applied to a p-type MOS capacitor?",
+      "answers": {
+        "a": " It increases",
+        "b": "It decreases",
+        "c": "It remains constant",
+        "d": "It becomes zero"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -19,12 +53,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which condition corresponds to the flat-band voltage in a MOS capacitor?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The bands are flat, with no bending in the semiconductor.",
+        "b": "The inversion layer is fully formed.",
+        "c": " The oxide-semiconductor interface is highly charged.",
+        "d": "The depletion region is at its maximum width."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -32,7 +66,7 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]

@@ -2,12 +2,29 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the role of the oxide layer in a MOS capacitor??",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To act as a conductor for charge carriers",
+        "b": "To provide mechanical support to the structure",
+        "c": " To serve as an insulating layer between the metal and semiconductor",
+        "d": "To act as a dopant for the semiconductor"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": " To serve as an insulating layer between the metal and semiconductor",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following phenomena is essential to understand before studying a MOS capacitor?",
+      "answers": {
+        "a": "Bandgap energy levels in semiconductors",
+        "b": "Mechanical properties of silicon",
+        "c": "Chemical properties of metal oxides",
+        "d": " Electrical conductivity of metals"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -19,12 +36,46 @@
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In a MOS capacitor, the accumulation, depletion, and inversion regions are determined by:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The applied voltage across the capacitor",
+        "b": "The thickness of the oxide layer",
+        "c": "The type of metal used as the gate",
+        "d": "  The doping concentration in the semiconductor"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following phenomena is essential to understand before studying a MOS capacitor??",
+      "answers": {
+        "a": "Bandgap energy levels in semiconductors",
+        "b": "Mechanical properties of silicon",
+        "c": "Chemical properties of metal oxides",
+        "d": " Electrical conductivity of metals"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which property of the semiconductor is primarily modified by doping in a MOS capacitor?",
+      "answers": {
+        "a": "Thermal conductivity",
+        "b": "Bandgap energy",
+        "c": " Electrical conductivity",
+        "d": " Optical properties"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -33,6 +84,40 @@
         "d": "Explanation 2"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What determines the type of charge carriers (electrons or holes) in a semiconductor?",
+      "answers": {
+        "a": "The type of metal used in the MOS capacitor",
+        "b": "The applied voltage",
+        "c": " The type and level of doping",
+        "d": " The thickness of the oxide layer"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The flat-band condition in a MOS capacitor occurs when:",
+      "answers": {
+        "a": "The applied voltage is zero",
+        "b": "There is no net charge in the semiconductor",
+        "c": " The oxide layer is conducting",
+        "d": " The energy bands in the semiconductor are bent"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
