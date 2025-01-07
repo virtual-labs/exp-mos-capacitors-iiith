@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOS Capacitor Interactive Quiz</title>
+	<link rel="stylesheet" href="./css/main.css">
+    
 </head>
 <body>
-		<!-- Your code goes here-->
+    <div class="quiz-container">
+        <h1>MOS Capacitor Interactive Quiz</h1>
+        <div class="progress" id="progress"></div>
+        <div id="graph-container" class="graph-container">
+            <canvas id="graph" class="graph"></canvas>
+        </div>
+        <div class="options" id="options">
+            <!-- Options will be populated by JavaScript -->
+        </div>
+        <div id="feedback" class="feedback"></div>
+        <div id="explanation" class="explanation">
+            <!-- Explanation will be populated by JavaScript -->
+        </div>
+        <button id="next-btn" class="next-btn" disabled>Next Question</button>
+    </div>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+   <script src="./js/main.js"></script>
 </body>
 </html>
