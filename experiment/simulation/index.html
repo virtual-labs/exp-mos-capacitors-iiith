@@ -8,21 +8,51 @@
     
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>MOS Capacitor Interactive Quiz</h1>
-        <div class="progress" id="progress"></div>
-        <div id="graph-container" class="graph-container">
-            <canvas id="graph" class="graph"></canvas>
+    <div class="container">
+      <div class="main-content">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
         </div>
-        <div class="options" id="options">
-            <!-- Options will be populated by JavaScript -->
+        
+        <div class="question-header"></div>
+        
+        <div class="graph-container">
+          <svg class="cv-curve" viewBox="0 0 600 400">
+            <!-- Axes -->
+            <line x1="50" y1="350" x2="550" y2="350" stroke="black" stroke-width="2"/>
+            <line x1="50" y1="50" x2="50" y2="350" stroke="black" stroke-width="2"/>
+            
+            <!-- Axis labels -->
+            <text x="300" y="390" text-anchor="middle">Gate Voltage (V)</text>
+            <text x="20" y="200" text-anchor="middle" transform="rotate(-90, 20, 200)">Capacitance (C)</text>
+            
+            <!-- CV curve will be updated dynamically -->
+            <path class="curve-path" fill="none" stroke="black" stroke-width="3"/>
+            
+            <!-- Threshold voltage line (will be shown when needed) -->
+            <line class="threshold-line" x1="0" y1="0" x2="0" y2="0"/>
+            
+            <!-- VTH label (will be shown when needed) -->
+            <text class="vth-label" x="0" y="0">VTH</text>
+          </svg>
+          
+          <div class="drop-zones"></div>
         </div>
-        <div id="feedback" class="feedback"></div>
-        <div id="explanation" class="explanation">
-            <!-- Explanation will be populated by JavaScript -->
+        
+        <div class="button-container">
+          <button class="check-button">Check Answers</button>
+          <button class="next-button">Next Question</button>
         </div>
-        <button id="next-btn" class="next-btn" disabled>Next Question</button>
+        
+        <div class="feedback"></div>
+      </div>
+      
+      <div class="labels-container">
+        <!-- Labels will be populated dynamically -->
+      </div>
     </div>
+  
+  </body>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
    <script src="./js/main.js"></script>
