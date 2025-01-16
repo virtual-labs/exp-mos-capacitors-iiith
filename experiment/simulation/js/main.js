@@ -1,209 +1,200 @@
-
-const quizData = [
+const questions = [
     {
-        graphData: {
-            labels: ['Gate Voltage (V)', '-4', '-3', '-2', '-1', '0', '1', '2', '3', '4'],
-            data: [
-                {x: -4, y: 2.5},
-                {x: -3, y: 2.4},
-                {x: -2, y: 1.8},
-                {x: -1, y: 1.2},
-                {x: 0, y: 0.8},
-                {x: 1, y: 0.6},
-                {x: 2, y: 0.5},
-                {x: 3, y: 0.5},
-                {x: 4, y: 0.5}
-            ]
-        },
-        question: "What operation region is shown in this C-V characteristic of MOS capacitor?",
-        options: [
-            "Accumulation",
-            "Depletion",
-            "Inversion",
-            "Flat-band"
-        ],
-        correct: 0,
-        explanation: "This is the Accumulation region. The high capacitance at negative gate voltage for a p-type substrate indicates accumulation of majority carriers (holes) at the semiconductor surface. The capacitance reaches its maximum value, equal to the oxide capacitance."
+      id: 1,
+      type: 'Standard-CV',
+      title: 'Label the regions of this C-V characteristic curve',
+      curve: 'M50,100 H200 C230,100 250,100 270,150 S290,250 310,300 S330,350 550,350',
+      threshold: {x: 400, y: 50},
+      showThreshold: true,
+      regions: ['accumulation', 'depletion', 'inversion'],
+      dropZonePositions: [
+        {top: '80px', left: '100px'},
+        {top: '150px', left: '250px'},
+        {top: '320px', left: '400px'}
+      ]
     },
     {
-        graphData: {
-            labels: ['Gate Voltage (V)', '-4', '-3', '-2', '-1', '0', '1', '2', '3', '4'],
-            data: [
-                {x: -4, y: 2.5},
-                {x: -3, y: 2.5},
-                {x: -2, y: 2.4},
-                {x: -1, y: 1.8},
-                {x: 0, y: 1.2},
-                {x: 1, y: 0.8},
-                {x: 2, y: 0.6},
-                {x: 3, y: 0.5},
-                {x: 4, y: 0.5}
-            ]
-        },
-        question: "Identify the operation region in this MOS capacitor C-V characteristic:",
-        options: [
-            "Accumulation",
-            "Depletion",
-            "Inversion",
-            "Flat-band"
-        ],
-        correct: 1,
-        explanation: "This is the Depletion region. As the gate voltage becomes less negative, the majority carriers (holes) are pushed away from the surface, creating a depletion region. This results in a decreasing capacitance as the depletion width increases."
+      id: 2,
+      type: 'PMOS',
+      title: 'Label the regions of this PMOS C-V curve',
+      curve: 'M50,350 Q150,350 200,280 T300,200 T400,100 T500,100',
+      regions: ['inversion', 'depletion', 'accumulation'],
+      dropZonePositions: [
+        {top: '320px', left: '100px'},
+        {top: '200px', left: '250px'},
+        {top: '80px', left: '400px'}
+      ]
     },
     {
-        graphData: {
-            labels: ['Gate Voltage (V)', '-4', '-3', '-2', '-1', '0', '1', '2', '3', '4'],
-            data: [
-                {x: -4, y: 0.5},
-                {x: -3, y: 0.5},
-                {x: -2, y: 0.6},
-                {x: -1, y: 1.2},
-                {x: 0, y: 1.8},
-                {x: 1, y: 2.2},
-                {x: 2, y: 2.4},
-                {x: 3, y: 2.5},
-                {x: 4, y: 2.5}
-            ]
-        },
-        question: "Which region of operation is represented by this C-V curve?",
-        options: [
-            "Depletion",
-            "Inversion",
-            "Accumulation",
-            "Flat-band"
-        ],
-        correct: 1,
-        explanation: "This is the Inversion region. At strong positive gate voltages, minority carriers (electrons) are attracted to the surface, forming an inversion layer. The capacitance increases and approaches the oxide capacitance as the inversion layer forms."
-    },
-    {
-        graphData: {
-            labels: ['Gate Voltage (V)', '-4', '-3', '-2', '-1', '0', '1', '2', '3', '4'],
-            data: [
-                {x: -4, y: 0.8},
-                {x: -3, y: 1.0},
-                {x: -2, y: 1.2},
-                {x: -1, y: 1.5},
-                {x: 0, y: 1.5},
-                {x: 1, y: 1.5},
-                {x: 2, y: 1.2},
-                {x: 3, y: 1.0},
-                {x: 4, y: 0.8}
-            ]
-        },
-        question: "Which region is represented by this C-V characteristic where the bands are flat?",
-        options: [
-            "Accumulation",
-            "Depletion",
-            "Inversion",
-            "Flat-band"
-        ],
-        correct: 3,
-        explanation: "This is the Flat-band condition. At the flat-band voltage, there is no band bending and no charge in the semiconductor. The capacitance is at an intermediate value between the maximum and minimum capacitance."
+      id: 3,
+      type: 'NMOS-HF',
+      title: 'Label the regions of this High-Frequency NMOS C-V curve',
+      curve: 'M50,100 Q150,100 200,150 T300,250 T400,350 T500,350',
+      regions: ['accumulation', 'depletion', 'inversion'],
+      dropZonePositions: [
+        {top: '80px', left: '100px'},
+        {top: '200px', left: '250px'},
+        {top: '320px', left: '400px'}
+      ]
     }
-];
+  ];
 
-let currentQuestion = 0;
-let selectedAnswer = null;
-const ctx = document.getElementById('graph').getContext('2d');
-let chart;
+  let currentQuestionIndex = 0;
+  let draggedElement = null;
 
-function updateProgress() {
-    document.getElementById('progress').textContent = 
-        `Question ${currentQuestion + 1} of ${quizData.length}`;
-}
-
-function drawGraph(graphData) {
-    if (chart) {
-        chart.destroy();
-    }
-
-    chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            datasets: [{
-                label: 'C-V Characteristic',
-                data: graphData.data,
-                borderColor: '#3498db',
-                tension: 0.4,
-                fill: false
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                x: {
-                    type: 'linear',
-                    position: 'bottom',
-                    title: {
-                        display: true,
-                        text: 'Gate Voltage (V)'
-                    }
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Capacitance (pF)'
-                    }
-                }
-            }
-        }
-    });
-}
-
-function loadQuestion() {
-    const question = quizData[currentQuestion];
-    drawGraph(question.graphData);
-    updateProgress();
+  function setupQuestion(questionIndex) {
+    const question = questions[questionIndex];
     
-    document.getElementById('options').innerHTML = question.options
-        .map((option, index) => `
-            <button class="option-btn" onclick="selectAnswer(${index})">
-                ${option}
-            </button>
-        `).join('');
+    // Update progress bar
+    const progress = ((questionIndex + 1) / questions.length) * 100;
+    document.querySelector('.progress-fill').style.width = `${progress}%`;
     
-    document.getElementById('feedback').style.display = 'none';
-    document.getElementById('explanation').style.display = 'none';
-    document.getElementById('next-btn').disabled = true;
-    selectedAnswer = null;
-}
-
-function selectAnswer(index) {
-    selectedAnswer = index;
-    const question = quizData[currentQuestion];
-    const options = document.querySelectorAll('.option-btn');
-    const feedback = document.getElementById('feedback');
+    // Update question header
+    document.querySelector('.question-header').textContent = question.title;
     
-    options.forEach(option => {
-        option.classList.remove('selected', 'correct', 'incorrect');
-    });
-
-    if (index === question.correct) {
-        options[index].classList.add('correct');
-        feedback.innerHTML = "Correct! Well done!";
-        feedback.classList.add('correct');
-        feedback.classList.remove('incorrect');
+    // Update CV curve
+    document.querySelector('.curve-path').setAttribute('d', question.curve);
+    
+    // Handle threshold line
+    const thresholdLine = document.querySelector('.threshold-line');
+    const vthLabel = document.querySelector('.vth-label');
+    
+    if (question.showThreshold) {
+      const x = question.threshold.x;
+      thresholdLine.setAttribute('x1', x);
+      thresholdLine.setAttribute('x2', x);
+      thresholdLine.setAttribute('y1', 50);
+      thresholdLine.setAttribute('y2', 350);
+      thresholdLine.style.display = 'block';
+      
+      vthLabel.setAttribute('x', x - 10);
+      vthLabel.setAttribute('y', 380);
+      vthLabel.textContent = 'VTH';
+      vthLabel.style.display = 'block';
     } else {
-        options[index].classList.add('incorrect');
-        options[question.correct].classList.add('correct');
-        feedback.innerHTML = `Incorrect. The correct answer is ${question.options[question.correct]}.`;
-        feedback.classList.add('incorrect');
-        feedback.classList.remove('correct');
+      thresholdLine.style.display = 'none';
+      vthLabel.style.display = 'none';
     }
-
-    feedback.style.display = 'block';
     
-    const explanation = document.getElementById('explanation');
-    explanation.innerHTML = question.explanation;
-    explanation.style.display = 'block';
+    // Clear and setup drop zones
+    const dropZonesContainer = document.querySelector('.drop-zones');
+    dropZonesContainer.innerHTML = '';
     
-    document.getElementById('next-btn').disabled = false;
-}
+    question.regions.forEach((region, index) => {
+      const dropZone = document.createElement('div');
+      dropZone.className = 'drop-zone';
+      dropZone.dataset.region = region;
+      dropZone.style.top = question.dropZonePositions[index].top;
+      dropZone.style.left = question.dropZonePositions[index].left;
+      dropZonesContainer.appendChild(dropZone);
+    });
+    
+    // Clear and setup labels
+    const labelsContainer = document.querySelector('.labels-container');
+    labelsContainer.innerHTML = '';
+    
+    const shuffledRegions = [...question.regions].sort(() => Math.random() - 0.5);
+    shuffledRegions.forEach(region => {
+      const label = document.createElement('div');
+      label.className = 'draggable';
+      label.draggable = true;
+      label.dataset.name = region;
+      label.textContent = region.charAt(0).toUpperCase() + region.slice(1);
+      labelsContainer.appendChild(label);
+    });
+    
+    // Reset feedback and buttons
+    document.querySelector('.feedback').className = 'feedback';
+    document.querySelector('.feedback').textContent = '';
+    document.querySelector('.next-button').style.display = 'none';
+    
+    setupDragAndDrop();
+  }
 
-document.getElementById('next-btn').addEventListener('click', () => {
-    currentQuestion = (currentQuestion + 1) % quizData.length;
-    loadQuestion();
-});
+  function setupDragAndDrop() {
+    const draggables = document.querySelectorAll('.draggable');
+    const dropZones = document.querySelectorAll('.drop-zone');
+    
+    draggables.forEach(draggable => {
+      draggable.addEventListener('dragstart', (e) => {
+        draggedElement = draggable;
+        draggable.classList.add('dragging');
+      });
 
-// Initialize the first question
-loadQuestion();
+      draggable.addEventListener('dragend', () => {
+        draggable.classList.remove('dragging');
+      });
+    });
+
+    dropZones.forEach(dropZone => {
+      dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        if (draggedElement) {
+          if (dropZone.children.length > 0) {
+            const existingLabel = dropZone.children[0];
+            document.querySelector('.labels-container').appendChild(existingLabel);
+          }
+          dropZone.appendChild(draggedElement);
+        }
+      });
+    });
+  }
+
+  document.querySelector('.check-button').addEventListener('click', () => {
+    const dropZones = document.querySelectorAll('.drop-zone');
+    let allCorrect = true;
+    let incorrectRegions = [];
+
+    dropZones.forEach(dropZone => {
+      const expectedRegion = dropZone.dataset.region;
+      const placedLabel = dropZone.children[0];
+      
+      if (!placedLabel || placedLabel.dataset.name !== expectedRegion) {
+        allCorrect = false;
+        if (placedLabel) {
+          incorrectRegions.push(placedLabel.dataset.name);
+        }
+      }
+    });
+
+    const feedback = document.querySelector('.feedback');
+    feedback.className = 'feedback';
+    
+    if (allCorrect) {
+      feedback.textContent = 'Correct! You can now proceed to the next question.';
+      feedback.classList.add('correct');
+      if (currentQuestionIndex < questions.length - 1) {
+        document.querySelector('.next-button').style.display = 'block';
+      } else {
+        feedback.textContent = 'Congratulations! You have completed all questions!';
+      }
+    } else {
+      feedback.textContent = `Some regions are incorrect. Check: ${incorrectRegions.join(', ')}`;
+      feedback.classList.add('incorrect');
+    }
+  });
+
+  document.querySelector('.next-button').addEventListener('click', () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      setupQuestion(currentQuestionIndex);
+    }
+  });
+
+  document.querySelector('.labels-container').addEventListener('dragover', (e) => {
+    e.preventDefault();
+  });
+
+  document.querySelector('.labels-container').addEventListener('drop', (e) => {
+    e.preventDefault();
+    if (draggedElement) {
+      document.querySelector('.labels-container').appendChild(draggedElement);
+    }
+  });
+
+  // Initialize first question
+  setupQuestion(0);
