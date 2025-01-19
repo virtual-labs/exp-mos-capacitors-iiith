@@ -20,5 +20,5 @@ Fill a brief description of this experiment here
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
+1 |Shruti Dhasmana | Student | ECE| IIIT-H | shruti23cc12@gmail.com
 2 | . | . | . | . | .
