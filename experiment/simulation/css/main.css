@@ -1,312 +1,179 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5;
-    color: #1a1a1a;
-  }
+  background-color: #f0f2f5;
+  color: #1a1a1a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.container {
+  display: flex;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    gap: 2.5rem;
-    padding: 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .main-content {
-    display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    flex: 1;
+    padding: 1rem;
   }
+}
 
-  .question-header {
-    margin-top: 2px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    padding: 1.25rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .question-header:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .graph-container {
-    position: relative;
-    width: 600px;
-    height: 400px;
-    border: 1px solid #e0e0e0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-
-  .cv-curve {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .drop-zone {
-    position: absolute;
-    padding: 12px;
-    border: 2px dashed #2196F3;
-    border-radius: 8px;
-    min-width: 100px;
-    min-height: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(4px);
-    transition: all 0.3s ease;
-  }
-
-  .drop-zone:hover {
-    border-color: #1976D2;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-
-
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5;
-    color: #1a1a1a;
-  }
-
+@media (max-width: 480px) {
   .container {
-    display: flex;
-    flex-direction: row;
-    gap: 2.5rem;
-    padding: 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      padding: 1rem;
-      gap: 1.5rem;
-    }
-  }
-
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    flex: 1;
-    width: 100%;
-  }
-
-  .question-header {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    padding: 1.25rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .question-header:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .graph-container {
-    position: relative;
-    width: 100%;
-    max-width: 550px;
-    height: min(400px, 60vw);
-    border: 1px solid #e0e0e0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
-  .cv-curve {
-    position: absolute;
-    width: 90%;
-    height: 90%;
-  }
-
-  .drop-zone {
-    position: absolute;
-    padding: clamp(8px, 2vw, 12px);
-    border: 2px dashed #2196F3;
-    border-radius: 8px;
-    min-width: min(100px, 30%);
-    min-height: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(4px);
-    transition: all 0.3s ease;
-  }
-
-  .drop-zone:hover {
-    border-color: #1976D2;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (max-width: 480px) {
-    .container {
-      padding: 0.75rem;
-      gap: 1rem;
-    }
-    
-    .question-header {
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-    
-    .drop-zone {
-      min-width: 60px;
-    }
-  }
-
-  .container {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    font-family: Arial, sans-serif;
-  }
-
-  .main-content {
-    display: flex;
-    flex-direction: column;
+    padding: 0.75rem;
     gap: 1rem;
   }
+}
 
-  .question-header {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background: #f5f5f5;
-    border-radius: 4px;
-  }
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  width: 100%;
+}
 
-  .graph-container {
-    position: relative;
-    width: 600px;
-    height: 400px;
-    border: 2px solid #333;
-    background: white;
-  }
+.question-header {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 200;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
 
-  .cv-curve {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
+.question-header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
-  .drop-zone {
-    position: absolute;
-    padding: 5px;
-    border: 2px dashed #999;
-    border-radius: 5px;
-    min-width: 80px;
-    min-height: 20px;
-    background: rgba(255, 255, 255, 0.9);
-  }
+.graph-container {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: min(400px, 60vw);
+  border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+}
 
-  .labels-container {
-    display: flex;
-    margin-top:100px;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+.cv-curve {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-  .draggable {
-    padding: 8px 16px;
-    background: #4CAF50;
-    color: white;
-    border-radius: 4px;
-    cursor: move;
-    user-select: none;
-    text-align: center;
-  }
+.drop-zone {
+  position: absolute;
+  padding: clamp(8px, 2vw, 12px);
+  border: 1px dashed #2196F3;
+  border-radius: 8px;
+  min-width: min(100px, 30%);
+  min-height: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
 
-  .draggable.dragging {
-    opacity: 0.5;
-  }
+.drop-zone:hover {
+  border-color: #1976D2;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .button-container {
-    display: flex;
-    gap: 1rem;    
-  }
+.labels-container {
+  margin-top:140px;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-  .check-button, .next-button {
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.draggable {
+  padding: 5px 16px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: move;
+  user-select: none;
+  text-align: center;
+}
 
-  .check-button {
-    background: #2196F3;
-  }
+.draggable.dragging {
+  opacity: 0.5;
+}
 
-  .check-button:hover {
-    background: #1976D2;
-  }
+.button-container {
+  margin-left:100px;
+  display: flex;
+  gap: 1rem;
+}
 
-  .next-button {
-    background: #4CAF50;
-    display: none;
-  }
+.check-button,
+.next-button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .next-button:hover {
-    background: #388E3C;
-  }
+.check-button {
+  background: #2196F3;
+}
 
-  .feedback {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 4px;
-  }
+.check-button:hover {
+  background: #1976D2;
+}
 
-  .feedback.correct {
-    background: #C8E6C9;
-    color: #2E7D32;
-  }
+.next-button {
+  background: #4CAF50;
+  display: none;
+}
 
-  .feedback.incorrect {
-    background: #FFCDD2;
-    color: #C62828;
-  }
+.next-button:hover {
+  background: #388E3C;
+}
 
-  .progress-bar {
-    width: 100%;
-    height: 10px;
-    background: #f0f0f0;
-    border-radius: 1px;
-    /* margin-bottom: 1rem; */
-  }
+.feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
 
-  .progress-fill {
-    height: 100%;
-    background: #4CAF50;
-    border-radius: 10px;
-    transition: width 0.3s ease;
-  }
+.feedback.correct {
+  background: #C8E6C9;
+  color: #2E7D32;
+}
 
-  .threshold-line {
-    stroke: #0000FF;
-    stroke-dasharray: 5,5;
-  }
+.feedback.incorrect {
+  background: #FFCDD2;
+  color: #C62828;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+  border-radius: 1px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4CAF50;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.threshold-line {
+  stroke: #0000FF;
+  stroke-dasharray: 5, 5;
+}
