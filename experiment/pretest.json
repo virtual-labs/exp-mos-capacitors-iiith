@@ -2,122 +2,105 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the role of the oxide layer in a MOS capacitor??",
+      "question": "What is the primary function of the oxide layer in a MOS capacitor?",
       "answers": {
-        "a": "To act as a conductor for charge carriers",
+        "a": "To conduct current between metal and semiconductor",
         "b": "To provide mechanical support to the structure",
-        "c": " To serve as an insulating layer between the metal and semiconductor",
-        "d": "To act as a dopant for the semiconductor"
+        "c": "To serve as an insulating dielectric layer between the metal and semiconductor",
+        "d": "To modify the semiconductor's doping concentration"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": " To serve as an insulating layer between the metal and semiconductor",
-        "d": "Explanation 2"
+        "a": "Incorrect. The oxide layer is specifically designed to prevent current conduction.",
+        "b": "Incorrect. While it provides some mechanical support, this is not its primary function.",
+        "c": "Correct! The oxide layer serves as an insulating dielectric, preventing direct current flow between the metal gate and semiconductor.",
+        "d": "Incorrect. The oxide layer does not affect the semiconductor's doping concentration."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "Which of the following phenomena is essential to understand before studying a MOS capacitor?",
+      "question": "What happens in the accumulation regime of a p-type MOS capacitor?",
       "answers": {
-        "a": "Bandgap energy levels in semiconductors",
-        "b": "Mechanical properties of silicon",
-        "c": "Chemical properties of metal oxides",
-        "d": " Electrical conductivity of metals"
+        "a": "Minority carriers (electrons) accumulate at the interface",
+        "b": "Majority carriers (holes) accumulate at the oxide-semiconductor interface",
+        "c": "The semiconductor becomes depleted of all carriers",
+        "d": "An inversion layer forms at the interface"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "In a MOS capacitor, the accumulation, depletion, and inversion regions are determined by:",
-      "answers": {
-        "a": "The applied voltage across the capacitor",
-        "b": "The thickness of the oxide layer",
-        "c": "The type of metal used as the gate",
-        "d": "  The doping concentration in the semiconductor"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Which of the following phenomena is essential to understand before studying a MOS capacitor??",
-      "answers": {
-        "a": "Bandgap energy levels in semiconductors",
-        "b": "Mechanical properties of silicon",
-        "c": "Chemical properties of metal oxides",
-        "d": " Electrical conductivity of metals"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Which property of the semiconductor is primarily modified by doping in a MOS capacitor?",
-      "answers": {
-        "a": "Thermal conductivity",
-        "b": "Bandgap energy",
-        "c": " Electrical conductivity",
-        "d": " Optical properties"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What determines the type of charge carriers (electrons or holes) in a semiconductor?",
-      "answers": {
-        "a": "The type of metal used in the MOS capacitor",
-        "b": "The applied voltage",
-        "c": " The type and level of doping",
-        "d": " The thickness of the oxide layer"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "The flat-band condition in a MOS capacitor occurs when:",
-      "answers": {
-        "a": "The applied voltage is zero",
-        "b": "There is no net charge in the semiconductor",
-        "c": " The oxide layer is conducting",
-        "d": " The energy bands in the semiconductor are bent"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. In accumulation, majority carriers (not minority carriers) accumulate.",
+        "b": "Correct! When VG < VFB in a p-type substrate, holes (majority carriers) accumulate at the interface.",
+        "c": "Incorrect. This describes the depletion regime.",
+        "d": "Incorrect. This occurs in the inversion regime."
       },
       "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What determines the oxide capacitance (Cox) in a MOS capacitor?",
+      "answers": {
+        "a": "Only the oxide thickness",
+        "b": "The oxide permittivity and thickness along with the gate area",
+        "c": "The semiconductor doping concentration",
+        "d": "The applied gate voltage"
+      },
+      "explanations": {
+        "a": "Incorrect. While thickness is important, other factors also matter.",
+        "b": "Correct! Cox = εox·A/tox, where εox is oxide permittivity, A is gate area, and tox is oxide thickness.",
+        "c": "Incorrect. Doping concentration affects threshold voltage but not Cox.",
+        "d": "Incorrect. Gate voltage determines the operating regime but not Cox."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What characterizes the flat-band condition in a MOS capacitor?",
+      "answers": {
+        "a": "No band bending and no net charge in the semiconductor",
+        "b": "Maximum band bending in the semiconductor",
+        "c": "Formation of an inversion layer",
+        "d": "Maximum depletion width"
+      },
+      "explanations": {
+        "a": "Correct! At flat-band voltage (VFB), there is no band bending and no net charge in the semiconductor.",
+        "b": "Incorrect. Maximum band bending occurs in strong inversion.",
+        "c": "Incorrect. This occurs at voltages above threshold voltage.",
+        "d": "Incorrect. This occurs at the onset of strong inversion."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How does the capacitance behave in strong inversion at high frequency?",
+      "answers": {
+        "a": "Returns to maximum value (Cox)",
+        "b": "Remains at minimum value",
+        "c": "Increases linearly with voltage",
+        "d": "Becomes zero"
+      },
+      "explanations": {
+        "a": "Incorrect. This occurs only at low frequency.",
+        "b": "Correct! At high frequency, minority carriers cannot respond, keeping capacitance at minimum.",
+        "c": "Incorrect. Capacitance doesn't vary linearly with voltage.",
+        "d": "Incorrect. Capacitance never becomes exactly zero."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens to the depletion width as gate voltage increases in the depletion regime?",
+      "answers": {
+        "a": "It increases until reaching maximum width",
+        "b": "It decreases continuously",
+        "c": "It remains constant",
+        "d": "It oscillates randomly"
+      },
+      "explanations": {
+        "a": "Correct! The depletion width increases with gate voltage until reaching maximum at strong inversion.",
+        "b": "Incorrect. The width increases, not decreases.",
+        "c": "Incorrect. The width varies with gate voltage.",
+        "d": "Incorrect. The change is systematic, not random."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]

@@ -7,9 +7,9 @@ A **MOS (Metal-Oxide-Semiconductor) capacitor** is one of the fundamental buildi
 
 ## **Structure**  
 A typical MOS capacitor consists of three layers:  
-1. **Metal**: Acts as the gate terminal (e.g., aluminum or polysilicon).  
-2. **Oxide Layer**: An insulating layer, typically silicon dioxide (SiO₂), separating the metal and semiconductor.  
-3. **Semiconductor**: A silicon substrate, which can be p-type or n-type depending on doping.  
+1. **Metal Gate**: Traditionally aluminum, but modern devices often use heavily-doped polysilicon due to its process compatibility and work function tunability.
+2. **Oxide Layer**: An insulating layer, typically silicon dioxide (SiO₂), though modern devices may use high-k dielectrics like HfO₂ to reduce leakage current.
+3. **Semiconductor**: Usually silicon substrate, which can be p-type or n-type depending on doping. The doping concentration affects the threshold voltage and capacitance characteristics.
 
 ### **Diagram**  
 Below is an example diagram of a MOS capacitor structure:
@@ -21,19 +21,34 @@ Below is an example diagram of a MOS capacitor structure:
 
 ## **Working Principle**  
 
-The MOS capacitor works by applying a voltage to the metal gate, which controls the charge distribution in the semiconductor. Depending on the voltage applied, three distinct modes occur:  
+The MOS capacitor operation depends on the gate voltage (VG) relative to the substrate. The behavior can be classified into four distinct regimes:
 
 ### **1. Accumulation**  
-- **Condition**: Negative voltage applied to the gate (for p-type substrate).  
-- **Effect**: Electrons are repelled from the gate, and holes accumulate at the oxide-semiconductor interface.  
+- **Condition**: VG < VFB (Flat-band voltage) for p-type substrate
+- **Effect**: Majority carriers (holes) accumulate at the oxide-semiconductor interface
+- **Characteristics**: Maximum capacitance, equal to Cox
 
-### **2. Depletion**  
-- **Condition**: Small positive voltage applied to the gate.  
-- **Effect**: Holes are repelled from the interface, leaving behind negatively charged ions, forming a depletion region.  
+### **2. Flat-band**
+- **Condition**: VG = VFB
+- **Effect**: No band bending, no net charge in semiconductor
+- **Characteristics**: Represents the reference point for voltage measurements
 
-### **3. Inversion**  
-- **Condition**: Higher positive voltage applied to the gate.  
-- **Effect**: The depletion region widens, and free electrons from the substrate are attracted to the interface, forming an inversion layer (n-type region in a p-type substrate).  
+### **3. Depletion**  
+- **Condition**: VFB < VG < VTH (Threshold voltage)
+- **Effect**: 
+  - Majority carriers are repelled, forming a depletion region
+  - Width of depletion region increases with gate voltage
+  - Total capacitance decreases due to series combination of Cox and depletion capacitance
+
+### **4. Inversion**  
+- **Condition**: VG > VTH
+- **Effect**: 
+  - Strong band bending attracts minority carriers
+  - Forms an inversion layer of electrons (for p-type)
+  - Depletion width reaches maximum
+- **Characteristics**:
+  - Low frequency: Capacitance returns to Cox
+  - High frequency: Capacitance remains at minimum due to minority carrier response limitations
 
 ---
 
@@ -46,20 +61,32 @@ The voltage at which inversion begins. It depends on:
 - Oxide thickness.  
 
 ### **2. Capacitance C**  
-- **Accumulation and Inversion**: Capacitance is constant and determined by the oxide layer.  
-- **Depletion**: Capacitance decreases as the depletion region width increases.  
+The capacitance behavior depends on measurement frequency:
+- **Low Frequency (< 100 Hz)**:
+  - Accumulation: C = Cox
+  - Depletion: C decreases with VG
+  - Inversion: C returns to Cox
+- **High Frequency (> 1 kHz)**:
+  - Accumulation: C = Cox
+  - Depletion: C decreases with VG
+  - Inversion: C remains at minimum
 
 ---
 
 ## **Energy Band Diagrams**  
 
 ### **1. Flat-Band Condition**  
-- No net charge in the semiconductor.  
-- The energy bands are flat, with no bending.  
+- The flat-band voltage (VFB) is given by:
+  VFB = ΦMS - Qf/Cox
+  where:
+  - ΦMS is the metal-semiconductor work function difference
+  - Qf is the fixed oxide charge
+  - Cox is the oxide capacitance
 
 ### **2. Accumulation**  
 - Energy bands bend upward.  
 - Holes accumulate at the interface.  
+
 
 ### **3. Depletion**  
 - Energy bands bend downward, away from the Fermi level.  
@@ -75,16 +102,25 @@ The voltage at which inversion begins. It depends on:
 
 ### **Capacitance**  
 
-The total capacitance can be expressed as:
+The total capacitance in depletion mode:
 
-1 / C_total = 1 / C_ox + 1 / C_depl
+1/Ctotal = 1/Cox + 1/Cd
 
 Where:
--  C_total: Total capacitance of the MOS capacitor.
--  C_ox: Capacitance due to the oxide layer.
--  C_depl: Capacitance due to the depletion region.
+- Cox = εox·A/tox (oxide capacitance)
+- Cd = εsi·A/Wd (depletion capacitance)
+- εox: oxide permittivity
+- εsi: silicon permittivity
+- A: gate area
+- tox: oxide thickness
+- Wd: depletion width
 
-  ---
+The maximum depletion width is:
+Wd(max) = √(4εsi·ΦF/qNA)
+where ΦF is the Fermi potential and NA is the acceptor concentration.
+
+---
+
 ## **Applications**  
 
 1. **MOSFETs**: MOS capacitors form the gate structure in MOSFETs.  

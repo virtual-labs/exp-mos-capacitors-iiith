@@ -2,72 +2,72 @@
   "version": 2.0,
   "questions": [
     {
-      "question": " In which region of operation do minority carriers dominate near the oxide-semiconductor interface?",
+      "question": "In a MOS capacitor operating at high frequency, what physical mechanism explains why the capacitance remains at minimum in strong inversion?",
       "answers": {
-        "a": "Accumulation",
-        "b": "Depletion",
-        "c": "Inversion",
-        "d": "Saturation"
+        "a": "Minority carriers cannot respond quickly enough to the AC signal",
+        "b": "The depletion width becomes maximum",
+        "c": "The oxide thickness increases",
+        "d": "The majority carriers are completely depleted"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct! At high frequencies (>1kHz), minority carriers cannot be generated and recombined fast enough to respond to the AC signal, resulting in minimum capacitance.",
+        "b": "Incorrect. While the depletion width does reach maximum, this alone doesn't explain the capacitance behavior.",
+        "c": "Incorrect. The oxide thickness remains constant regardless of operating conditions.",
+        "d": "Incorrect. Majority carriers are depleted but this isn't why capacitance remains minimum."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     },
     {
-      "question": " What determines the capacitance of the oxide layer in a MOS capacitor?",
+      "question": "How does the flat-band voltage (VFB) change if positive fixed oxide charges are introduced in the oxide layer?",
       "answers": {
-        "a": "Doping concentration of the semiconductor",
-        "b": "Thickness of the oxide layer and its permittivity",
-        "c": "Width of the depletion region",
-        "d": " Applied gate voltage"
+        "a": "VFB becomes more positive",
+        "b": "VFB becomes more negative",
+        "c": "VFB remains unchanged",
+        "d": "VFB becomes zero"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Positive fixed charges in oxide shift VFB in the negative direction.",
+        "b": "Correct! According to VFB = ΦMS - Qf/Cox, positive fixed charges (Qf) make VFB more negative.",
+        "c": "Incorrect. Fixed charges directly affect VFB.",
+        "d": "Incorrect. VFB depends on both work function difference and oxide charges."
       },
       "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": "advanced"
     },
     {
-      "question": "What happens to the width of the depletion region when a positive gate voltage is applied to a p-type MOS capacitor?",
+      "question": "In a p-type MOS capacitor, what happens to the energy bands and carrier distribution when transitioning from depletion to weak inversion?",
       "answers": {
-        "a": " It increases",
-        "b": "It decreases",
-        "c": "It remains constant",
-        "d": "It becomes zero"
+        "a": "Bands bend upward, holes accumulate",
+        "b": "Bands remain flat, no carrier change",
+        "c": "Bands bend downward, electron concentration at surface approaches hole concentration",
+        "d": "Bands bend randomly, carriers distribute uniformly"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Upward band bending occurs in accumulation.",
+        "b": "Incorrect. Bands do bend during this transition.",
+        "c": "Correct! The bands bend downward more, and at weak inversion the electron (minority) concentration approaches the hole concentration at the surface.",
+        "d": "Incorrect. Band bending is systematic, not random."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "c",
+      "difficulty": "advanced"
     },
     {
-      "question": "Which condition corresponds to the flat-band voltage in a MOS capacitor?",
+      "question": "What is the relationship between the maximum depletion width (Wd,max) and the threshold voltage (VTH) in a MOS capacitor?",
       "answers": {
-        "a": "The bands are flat, with no bending in the semiconductor.",
-        "b": "The inversion layer is fully formed.",
-        "c": " The oxide-semiconductor interface is highly charged.",
-        "d": "The depletion region is at its maximum width."
+        "a": "They are inversely proportional",
+        "b": "They are directly proportional through the surface potential",
+        "c": "They are independent of each other",
+        "d": "They are related only at high frequencies"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. They are not inversely related.",
+        "b": "Correct! VTH occurs when surface potential equals 2ΦF, which determines Wd,max = √(4εsi·ΦF/qNA).",
+        "c": "Incorrect. They are related through the surface potential.",
+        "d": "Incorrect. The relationship exists regardless of frequency."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }
