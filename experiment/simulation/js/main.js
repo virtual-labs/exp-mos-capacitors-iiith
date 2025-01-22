@@ -8,9 +8,9 @@ const questions = [
     showThreshold: true,
     regions: ['accumulation', 'depletion', 'inversion'],
     dropZonePositions: [
-      { top: '80px', left: '100px' },
-      { top: '150px', left: '250px' },
-      { top: '320px', left: '400px' },
+      { top: '20%', left: '20%' },
+      { top: '40%', left: '45%' },
+      { top: '80%', left: '70%' },
     ],
   },
   {
@@ -20,9 +20,9 @@ const questions = [
     curve: 'M50,350 Q150,350 200,280 T300,200 T400,100 T500,100',
     regions: ['inversion', 'depletion', 'accumulation'],
     dropZonePositions: [
-      { top: '320px', left: '100px' },
-      { top: '200px', left: '250px' },
-      { top: '80px', left: '400px' },
+      { top: '80%', left: '20%' },
+      { top: '50%', left: '45%' },
+      { top: '20%', left: '70%' },
     ],
   },
   {
@@ -32,14 +32,13 @@ const questions = [
     curve: 'M50,100 Q150,100 200,150 T300,250 T400,350 T500,350',
     regions: ['accumulation', 'depletion', 'inversion'],
     dropZonePositions: [
-      { top: '80px', left: '100px' },
-      { top: '200px', left: '250px' },
-      { top: '320px', left: '400px' },
+      { top: '20%', left: '20%' },
+      { top: '50%', left: '45%' },
+      { top: '80%', left: '70%' },
     ],
   },
 ];
 
-// A fixed set of incorrect options to confuse the user
 const incorrectOptions = ['breakdown', 'conduction', 'saturation', 'flatband', 'oxidation'];
 
 let currentQuestionIndex = 0;
@@ -87,8 +86,11 @@ function setupQuestion(questionIndex) {
     const dropZone = document.createElement('div');
     dropZone.className = 'drop-zone';
     dropZone.dataset.region = region;
+    
+    // Apply percentage-based positioning
     dropZone.style.top = question.dropZonePositions[index].top;
     dropZone.style.left = question.dropZonePositions[index].left;
+    
     dropZonesContainer.appendChild(dropZone);
   });
 
@@ -96,13 +98,9 @@ function setupQuestion(questionIndex) {
   const labelsContainer = document.querySelector('.labels-container');
   labelsContainer.innerHTML = '';
 
-  // Combine correct and incorrect options
   const allOptions = [...question.regions, ...incorrectOptions];
-
-  // Shuffle the options
   const shuffledOptions = allOptions.sort(() => Math.random() - 0.5);
 
-  // Add all options as draggable labels
   shuffledOptions.forEach((region) => {
     const label = document.createElement('div');
     label.className = 'draggable';
@@ -112,7 +110,6 @@ function setupQuestion(questionIndex) {
     labelsContainer.appendChild(label);
   });
 
-  // Reset feedback and buttons
   document.querySelector('.feedback').className = 'feedback';
   document.querySelector('.feedback').textContent = '';
   document.querySelector('.next-button').style.display = 'none';
@@ -125,6 +122,7 @@ function setupDragAndDrop() {
   const dropZones = document.querySelectorAll('.drop-zone');
 
   draggables.forEach((draggable) => {
+    // Desktop drag events
     draggable.addEventListener('dragstart', (e) => {
       draggedElement = draggable;
       draggable.classList.add('dragging');
@@ -132,6 +130,37 @@ function setupDragAndDrop() {
 
     draggable.addEventListener('dragend', () => {
       draggable.classList.remove('dragging');
+    });
+
+    // Mobile touch events
+    draggable.addEventListener('touchstart', (e) => {
+      draggedElement = draggable;
+      draggable.classList.add('dragging');
+    });
+
+    draggable.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      draggable.style.position = 'absolute';
+      draggable.style.left = `${touch.clientX - draggable.offsetWidth / 2}px`;
+      draggable.style.top = `${touch.clientY - draggable.offsetHeight / 2}px`;
+    });
+
+    draggable.addEventListener('touchend', (e) => {
+      draggable.classList.remove('dragging');
+      draggable.style.position = '';
+
+      const touch = e.changedTouches[0];
+      const dropZone = document.elementFromPoint(touch.clientX, touch.clientY);
+
+      if (dropZone && dropZone.classList.contains('drop-zone')) {
+        if (dropZone.children.length > 0) {
+          const existingLabel = dropZone.children[0];
+          document.querySelector('.labels-container').appendChild(existingLabel);
+        }
+        dropZone.appendChild(draggedElement);
+      } else {
+        document.querySelector('.labels-container').appendChild(draggedElement);
+      }
     });
   });
 
