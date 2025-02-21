@@ -21,27 +21,29 @@ Below is an example diagram of a MOS capacitor structure:
 
 ## **Working Principle**  
 
-The MOS capacitor operation depends on the gate voltage (VG) relative to the substrate. The behavior can be classified into four distinct regimes:
+The MOS capacitor operation depends on the gate voltage (VGS) relative to the substrate. The behavior can be classified into four distinct regimes:
 
 ### **1. Accumulation**  
-- **Condition**: VG < VFB (Flat-band voltage) for p-type substrate
+Accumulation occurs in a Metal-Oxide-Semiconductor (MOS) capacitor when a voltage is applied to the gate such that it attracts majority carriers to the semiconductor-oxide interface. This happens when the gate voltage (VGVG​) is more negative for a p-type semiconductor or more positive for an n-type semiconductor.
+- **Condition**: VGS < VFB (Flat-band voltage) for p-type substrate
 - **Effect**: Majority carriers (holes) accumulate at the oxide-semiconductor interface
 - **Characteristics**: Maximum capacitance, equal to Cox
 
 ### **2. Flat-band**
-- **Condition**: VG = VFB
+The flat-band voltage (V_FB) in a Metal-Oxide-Semiconductor (MOS) capacitor is the voltage applied to the gate that ensures the energy bands in the semiconductor are flat, meaning there is no band bending at the semiconductor-oxide interface. This condition occurs when there is no net charge in the semiconductor, and the surface potential (ϕ_s) is zero.
+- **Condition**: VGS = VFB
 - **Effect**: No band bending, no net charge in semiconductor
 - **Characteristics**: Represents the reference point for voltage measurements
 
 ### **3. Depletion**  
-- **Condition**: VFB < VG < VTH (Threshold voltage)
+- **Condition**: VFB < VGS < VTH (Threshold voltage)
 - **Effect**: 
   - Majority carriers are repelled, forming a depletion region
   - Width of depletion region increases with gate voltage
   - Total capacitance decreases due to series combination of Cox and depletion capacitance
 
 ### **4. Inversion**  
-- **Condition**: VG > VTH
+- **Condition**: VGS > VTH
 - **Effect**: 
   - Strong band bending attracts minority carriers
   - Forms an inversion layer of electrons (for p-type)
@@ -51,75 +53,65 @@ The MOS capacitor operation depends on the gate voltage (VG) relative to the sub
   - High frequency: Capacitance remains at minimum due to minority carrier response limitations
 
 ---
+!(images/band.png)  
+!(images/image.png)  
+## **WORK FUNCTIONS** 
+# Work Function in MOS Capacitors
 
-## **Key Parameters**  
-
-### **1. Threshold Voltage V_th**  
-The voltage at which inversion begins. It depends on:  
-- Work function difference between the metal and semiconductor.  
-- Doping concentration in the substrate.  
-- Oxide thickness.  
-
-### **2. Capacitance C**  
-The capacitance behavior depends on measurement frequency:
-- **Low Frequency (< 100 Hz)**:
-  - Accumulation: C = Cox
-  - Depletion: C decreases with VG
-  - Inversion: C returns to Cox
-- **High Frequency (> 1 kHz)**:
-  - Accumulation: C = Cox
-  - Depletion: C decreases with VG
-  - Inversion: C remains at minimum
+## Introduction
+The **work function** (\( \Phi \)) is a fundamental property of materials that represents the minimum energy required to remove an electron from the Fermi level to vacuum. It plays a crucial role in **Metal-Oxide-Semiconductor (MOS) capacitors** and transistors.
 
 ---
 
-## **Energy Band Diagrams**  
+## Definition
+The **work function** of a material is given by:
 
-### **1. Flat-Band Condition**  
-- The flat-band voltage (VFB) is given by:
-  VFB = ΦMS - Qf/Cox
-  where:
-  - ΦMS is the metal-semiconductor work function difference
-  - Qf is the fixed oxide charge
-  - Cox is the oxide capacitance
+\[ \Phi = E_{vac} - E_F \]
 
-### **2. Accumulation**  
-- Energy bands bend upward.  
-- Holes accumulate at the interface.  
-
-
-### **3. Depletion**  
-- Energy bands bend downward, away from the Fermi level.  
-- The region near the oxide interface becomes depleted of majority carriers.  
-
-### **4. Inversion**  
-- Bands bend significantly downward.  
-- The minority carrier concentration exceeds that of the majority carriers near the interface.  
+where:
+- \( E_{vac} \) is the **vacuum energy level** (the energy needed to remove an electron completely from the material).
+- \( E_F \) is the **Fermi level** (the energy at which the probability of finding an electron is 50% at thermal equilibrium).
 
 ---
 
-## **Mathematical Analysis**  
+## Work Function in MOS Capacitors
+In a MOS structure, there are three key work functions:
 
-### **Capacitance**  
+1. **Metal Work Function (\( \Phi_M \))**: The work function of the gate material (e.g., aluminum, polysilicon, or high-k metal gates).
+2. **Semiconductor Work Function (\( \Phi_S \))**: The work function of the semiconductor, dependent on doping concentration.
+3. **Oxide Work Function**: Insulating layer (e.g., SiO₂) does not contribute to work function directly, but influences charge behavior.
 
-The total capacitance in depletion mode:
+The **metal-semiconductor work function difference** is critical for determining the flat-band voltage:
 
-1/Ctotal = 1/Cox + 1/Cd
-
-Where:
-- Cox = εox·A/tox (oxide capacitance)
-- Cd = εsi·A/Wd (depletion capacitance)
-- εox: oxide permittivity
-- εsi: silicon permittivity
-- A: gate area
-- tox: oxide thickness
-- Wd: depletion width
-
-The maximum depletion width is:
-Wd(max) = √(4εsi·ΦF/qNA)
-where ΦF is the Fermi potential and NA is the acceptor concentration.
+\[ \Phi_{MS} = \Phi_M - \Phi_S \]
 
 ---
+
+## Effect on MOS Behavior
+The work function influences the **threshold voltage** (\(V_{TH}\)) of a MOSFET, which is given by:
+
+\[ V_{TH} = V_{FB} + 2\phi_F + \frac{Q_d}{C_{ox}} \]
+
+where:
+- \( V_{FB} \) is the **flat-band voltage**
+- \( \phi_F \) is the **Fermi potential** of the semiconductor
+- \( Q_d \) is the **depletion charge**
+- \( C_{ox} \) is the **oxide capacitance**
+
+---
+
+## Typical Work Function Values
+| Material  | Work Function (eV) |
+|-----------|------------------|
+| Aluminum (Al) | 4.1 - 4.3 |
+| Polysilicon (p-type) | ~5.0 |
+| Polysilicon (n-type) | ~4.1 |
+| Silicon (Intrinsic) | ~4.6 |
+| Silicon Dioxide (SiO₂) | ~0 (insulator) |
+| High-k metals (e.g., TiN, TaN) | 4.5 - 5.2 |
+
+--
+!(images/img.png)  
 
 ## **Applications**  
 

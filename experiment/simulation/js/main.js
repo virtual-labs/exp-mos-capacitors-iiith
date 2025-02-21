@@ -2,7 +2,7 @@ const questions = [
   {
     id: 1,
     type: 'Standard-CV',
-    title: 'Label the regions of this C-V characteristic curve',
+    title: 'Label the regions of p-type MOS capacitor',
     curve: 'M50,100 H200 C230,100 250,100 270,150 S290,250 310,300 S330,350 550,350',
     threshold: { x: 400, y: 50 },
     showThreshold: true,
