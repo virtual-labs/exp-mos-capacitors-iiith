@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "In a MOS capacitor operating at high frequency, what physical mechanism explains why the capacitance remains at minimum in strong inversion?",
+      "question": "In a MOS capacitor operating at high frequency, what physical mechanism explains why the capacitance remains at minimum for Vgb > Vth?",
       "answers": {
         "a": "Minority carriers cannot respond quickly enough to the AC signal",
         "b": "The depletion width becomes maximum",
@@ -53,20 +53,20 @@
       "difficulty": "advanced"
     },
     {
-      "question": "What is the relationship between the maximum depletion width (Wd,max) and the threshold voltage (VTH) in a MOS capacitor?",
+      "question": "Which of the following are true for depletion width after voltage increases beyond threshold voltage (in Low frequency response case)?",
       "answers": {
-        "a": "They are inversely proportional",
-        "b": "They are directly proportional through the surface potential",
-        "c": "They are independent of each other",
-        "d": "They are related only at high frequencies"
+        "a": "Depletion width keeps on increasing with same proportion",
+        "b": "Depletion width decreases",
+        "c": "Depletion region is eliminated",
+        "d": "Depletion width more of less remain constant"
       },
       "explanations": {
-        "a": "Incorrect. They are not inversely related.",
-        "b": "Correct! VTH occurs when surface potential equals 2ΦF, which determines Wd,max = √(4εsi·ΦF/qNA).",
-        "c": "Incorrect. They are related through the surface potential.",
-        "d": "Incorrect. The relationship exists regardless of frequency."
+        "a": "Incorrect. No, think what happens at Vth",
+        "b": "incorrect! No, think what happens at Vth.",
+        "c": "Incorrect.No, think what happens at Vth .",
+        "d": "Yes, as inversion regions forms,the depletion region width become stagnant."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "d",
       "difficulty": "advanced"
     }
   ]
