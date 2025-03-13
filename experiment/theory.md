@@ -55,7 +55,7 @@ The flat-band voltage (Vfb) in a Metal-Oxide-Semiconductor (MOS) capacitor is th
 
 ---
 ![](images/band.png)  
-![](images/image.png)  
+ 
 ## **WORK FUNCTIONS** 
 # Work Function in MOS Capacitors
 
@@ -99,7 +99,7 @@ where:
 - Coxis the **oxide capacitance**
 
 ---
-
+![](images/img.png)  
 ## Typical Work Function Values
 | Material  | Work Function (eV) |
 |-----------|------------------|
@@ -111,7 +111,7 @@ where:
 | High-k metals (e.g., TiN, TaN) | 4.5 - 5.2 |
 
 --
-[]!(images/img.png)  
+
 
 
 ## **Applications**  
