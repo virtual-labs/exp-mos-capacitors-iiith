@@ -96,7 +96,7 @@ The work function influences the **threshold voltage** (V<sub>th</sub>) of a MOS
 where:
 - V<sub>fb</sub>  is the **flat-band voltage**
 - Φ<sub>f</sub> is the **Fermi potential** of the semiconductor
-- Q<sub>d</sub>is the **depletion charge**
+- Q<sub>d</sub> is the **depletion charge**
 - C<sub>ox</sub> is the **oxide capacitance**
 
 ---
