@@ -21,30 +21,30 @@ Below is an example diagram of a MOS capacitor structure:
 
 ## **Working Principle**  
 
-The MOS capacitor operation depends on the gate voltage V<sub>gs</sub>
+The MOS capacitor operation depends on the gate voltage (V<sub>gs</sub>)
  relative to the substrate. The behavior can be classified into four distinct regimes:
 
 ### **1. Accumulation**  
 Accumulation occurs in a Metal-Oxide-Semiconductor (MOS) capacitor when a voltage is applied to the gate such that it attracts majority carriers to the semiconductor-oxide interface. This happens when the gate voltage (Vgb with respect to body/substrate voltage​) is more negative for a p-type semiconductor or more positive for an n-type semiconductor
-- **Condition**: Vgb < 0 for p-type substrate and Vgb > 0 for n-type substrate.
+- **Condition**: V<sub>gb</sub> < 0 for p-type substrate and V<sub>gb</sub> > 0 for n-type substrate.
 - **Effect**: Majority carriers (holes in p-type and electrons in n-type) accumulate below the oxide-semiconductor interface
 - **Characteristics**: Maximum capacitance between gate and substrate, equal to Cox
 
 ### **2. Flat-band**
-The flat-band voltage (Vfb) in a Metal-Oxide-Semiconductor (MOS) capacitor is the voltage applied to the gate that ensures the energy bands in the semiconductor are flat, meaning there is no band bending at the semiconductor-oxide interface. This condition occurs when there is no net charge in the semiconductor, and the surface potential ϕs(potential of semiconductor just under the oxide) is zero.
-- **Condition**: Vgb = Vfb
+The flat-band voltage (V<sub>fb</sub>) in a Metal-Oxide-Semiconductor (MOS) capacitor is the voltage applied to the gate that ensures the energy bands in the semiconductor are flat, meaning there is no band bending at the semiconductor-oxide interface. This condition occurs when there is no net charge in the semiconductor, and the surface potential ϕs(potential of semiconductor just under the oxide) is zero.
+- **Condition**: V<sub>gb</sub> = V<sub>fb</sub>
 - **Effect**: No band bending, no net charge in semiconductor
 - **Characteristics**: Represents the reference point for voltage measurements
 
 ### **3. Depletion**  
-- **Condition**: Vfb < Vgb < Vth (Threshold voltage)
+- **Condition**: V<sub>fb</sub> < V<sub>gb</sub> < V<sub>th</sub> (Threshold voltage)
 - **Effect**: 
   - Majority carriers are repelled, forming a depletion region
   - Width of depletion region increases with gate voltage
   - Total capacitance decreases due to series combination of Cox and depletion capacitance
 
 ### **4. Inversion**  
-- **Condition**: Vgb > Vth
+- **Condition**: V<sub>gb</sub> > V<sub>th</sub>
 - **Effect**: 
   - Strong band bending attracts minority carriers
   - Forms an inversion layer of minority carriers from substrate of electrons (for p-type) and holes (for n-type substrate).
@@ -61,7 +61,7 @@ The flat-band voltage (Vfb) in a Metal-Oxide-Semiconductor (MOS) capacitor is th
 # Work Function in MOS Capacitors
 
 ## Introduction
-The **work function** (\( \Phi \)) is a fundamental property of materials that represents the minimum energy required to remove an electron from the Fermi level to vacuum. It plays a crucial role in **Metal-Oxide-Semiconductor (MOS) capacitors** and transistors.
+The **work function** (φ) is a fundamental property of materials that represents the minimum energy required to remove an electron from the Fermi level to vacuum. It plays a crucial role in **Metal-Oxide-Semiconductor (MOS) capacitors** and transistors.
 
 ---
 
@@ -89,7 +89,7 @@ The **metal-semiconductor work function difference** is critical for determining
 
 
 ## Effect on MOS Behavior
-The work function influences the **threshold voltage** (Vth) of a MOSFET, which is given by:
+The work function influences the **threshold voltage** (V<sub>th</sub>) of a MOSFET, which is given by:
 
 ![](./images/mos.png)
 
