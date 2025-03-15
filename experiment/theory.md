@@ -71,8 +71,8 @@ The **work function** of a material is given by:
 ![](./images/workfnc.png)
 
 where:
--  Evac  is the **vacuum energy level** (the energy needed to remove an electron completely from the material).
--  Ef is the **Fermi level** (the energy at which the probability of finding an electron is 50% at thermal equilibrium).
+-  E<sub>vac</sub> is the **vacuum energy level** (the energy needed to remove an electron completely from the material).
+-  E<sub>f</sub> is the **Fermi level** (the energy at which the probability of finding an electron is 50% at thermal equilibrium).
 
 ---
 
@@ -94,10 +94,10 @@ The work function influences the **threshold voltage** (V<sub>th</sub>) of a MOS
 ![](./images/mos.png)
 
 where:
-- Vfb  is the **flat-band voltage**
-- Φf  is the **Fermi potential** of the semiconductor
-- Qd is the **depletion charge**
-- Coxis the **oxide capacitance**
+- V<sub>fb</sub>  is the **flat-band voltage**
+- Φ<sub>f</sub> is the **Fermi potential** of the semiconductor
+- Q<sub>d</sub>is the **depletion charge**
+- C<sub>ox</sub> is the **oxide capacitance**
 
 ---
 ![](images/img.png)  
