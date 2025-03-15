@@ -87,7 +87,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What happens to the depletion width as gate voltage increases in the depletion regime?",
+      "question": "What happens to the depletion width as gate voltage increases in the depletion region?",
       "answers": {
         "a": "It increases until reaching maximum width",
         "b": "It decreases continuously",

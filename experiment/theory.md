@@ -21,7 +21,7 @@ Below is an example diagram of a MOS capacitor structure:
 
 ## **Working Principle**  
 
-The MOS capacitor operation depends on the gate voltage (VGS) relative to the substrate. The behavior can be classified into four distinct regimes:
+The MOS capacitor operation depends on the gate voltage (V_{gs}) relative to the substrate. The behavior can be classified into four distinct regimes:
 
 ### **1. Accumulation**  
 Accumulation occurs in a Metal-Oxide-Semiconductor (MOS) capacitor when a voltage is applied to the gate such that it attracts majority carriers to the semiconductor-oxide interface. This happens when the gate voltage (Vgb with respect to body/substrate voltage​) is more negative for a p-type semiconductor or more positive for an n-type semiconductor
