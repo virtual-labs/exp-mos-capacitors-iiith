@@ -1,2 +1,2 @@
 
-## MOS CAPACITORS
+## Metal Oxide Semiconductor (MOS)
