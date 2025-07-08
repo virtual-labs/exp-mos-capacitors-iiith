@@ -2,71 +2,156 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "In a MOS capacitor operating at high frequency, what physical mechanism explains why the capacitance remains at minimum for Vgb > Vth?",
+      "question": "In a MOS capacitor with p-type substrate, what charge carriers form the inversion layer?",
       "answers": {
-        "a": "Minority carriers cannot respond quickly enough to the AC signal",
-        "b": "The depletion width becomes maximum",
-        "c": "The oxide thickness increases",
-        "d": "The majority carriers are completely depleted"
+        "a": "Holes",
+        "b": "Electrons",
+        "c": "Ions",
+        "d": "Protons"
       },
       "explanations": {
-        "a": "Correct! At high frequencies (>1kHz), minority carriers cannot be generated and recombined fast enough to respond to the AC signal, resulting in minimum capacitance.",
-        "b": "Incorrect. While the depletion width does reach maximum, this alone doesn't explain the capacitance behavior.",
-        "c": "Incorrect. The oxide thickness remains constant regardless of operating conditions.",
-        "d": "Incorrect. Majority carriers are depleted but this isn't why capacitance remains minimum."
-      },
-      "correctAnswer": "a",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "How does the flat-band voltage (VFB) change if positive fixed oxide charges are introduced in the oxide layer?",
-      "answers": {
-        "a": "VFB becomes more positive",
-        "b": "VFB becomes more negative",
-        "c": "VFB remains unchanged",
-        "d": "VFB becomes zero"
-      },
-      "explanations": {
-        "a": "Incorrect. Positive fixed charges in oxide shift VFB in the negative direction.",
-        "b": "Correct! According to VFB = ΦMS - Qf/Cox, positive fixed charges (Qf) make VFB more negative.",
-        "c": "Incorrect. Fixed charges directly affect VFB.",
-        "d": "Incorrect. VFB depends on both work function difference and oxide charges."
+        "a": "Incorrect. Holes are the majority carriers in the bulk, not in inversion.",
+        "b": "Correct. Electrons form the inversion layer in p-type material.",
+        "c": "Incorrect. Ions are not mobile carriers in the semiconductor.",
+        "d": "Incorrect. Protons are not involved in charge transport here."
       },
       "correctAnswer": "b",
-      "difficulty": "advanced"
+      "difficulty": "beginner"
     },
     {
-      "question": "In a p-type MOS capacitor, what happens to the energy bands and carrier distribution when transitioning from depletion to weak inversion?",
+      "question": "Which region is characterized by a widening depletion width but no inversion layer?",
       "answers": {
-        "a": "Bands bend upward, holes accumulate",
-        "b": "Bands remain flat, no carrier change",
-        "c": "Bands bend downward, electron concentration at surface approaches hole concentration",
-        "d": "Bands bend randomly, carriers distribute uniformly"
+        "a": "Flatband",
+        "b": "Accumulation",
+        "c": "Depletion",
+        "d": "Inversion"
       },
       "explanations": {
-        "a": "Incorrect. Upward band bending occurs in accumulation.",
-        "b": "Incorrect. Bands do bend during this transition.",
-        "c": "Correct! The bands bend downward more, and at weak inversion the electron (minority) concentration approaches the hole concentration at the surface.",
-        "d": "Incorrect. Band bending is systematic, not random."
+        "a": "Incorrect. Flatband has no depletion region.",
+        "b": "Incorrect. Accumulation has majority carriers at surface.",
+        "c": "Correct. The depletion region expands with increasing gate voltage before inversion.",
+        "d": "Incorrect. Inversion means the surface now has minority carriers."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens to gate capacitance in inversion when measured at high frequency?",
+      "answers": {
+        "a": "It increases",
+        "b": "It becomes constant at oxide capacitance",
+        "c": "It drops to zero",
+        "d": "It equals the depletion capacitance"
+      },
+      "explanations": {
+        "a": "Incorrect. Inversion doesn't increase capacitance at high frequency.",
+        "b": "Correct. Inversion charge can’t follow fast signals, so C ≈ C<sub>ox</sub>.",
+        "c": "Incorrect. Capacitance doesn't vanish.",
+        "d": "Incorrect. That's true only at low frequencies."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following affects the flatband voltage?",
+      "answers": {
+        "a": "Gate oxide thickness",
+        "b": "Metal-semiconductor work function difference",
+        "c": "Substrate resistivity",
+        "d": "Oxide permittivity"
+      },
+      "explanations": {
+        "a": "Incorrect. It affects capacitance, not flatband voltage directly.",
+        "b": "Correct. Flatband depends on the work function difference between gate and semiconductor.",
+        "c": "Incorrect. Resistivity is not directly involved.",
+        "d": "Incorrect. Permittivity affects electric field, not flatband."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the ideal surface potential at threshold in a MOS capacitor?",
+      "answers": {
+        "a": "φ<sub>F</sub>",
+        "b": "0",
+        "c": "2φ<sub>F</sub>",
+        "d": "-φ<sub>F</sub>"
+      },
+      "explanations": {
+        "a": "Incorrect. That's when depletion begins.",
+        "b": "Incorrect. That's flatband.",
+        "c": "Correct. At strong inversion, surface potential equals 2φ<sub>F</sub>.",
+        "d": "Incorrect. Wrong sign and magnitude."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How does high-frequency behavior differ in MOS C-V characteristics?",
+      "answers": {
+        "a": "Inversion is more pronounced",
+        "b": "Capacitance rises in depletion",
+        "c": "Inversion layer doesn’t respond, so capacitance stays low",
+        "d": "Depletion disappears entirely"
+      },
+      "explanations": {
+        "a": "Incorrect. High frequency suppresses inversion response.",
+        "b": "Incorrect. Capacitance actually falls in depletion.",
+        "c": "Correct. Minority carriers can't respond fast enough; capacitance remains near minimum.",
+        "d": "Incorrect. Depletion still forms."
       },
       "correctAnswer": "c",
       "difficulty": "advanced"
     },
     {
-      "question": "Which of the following are true for depletion width after voltage increases beyond threshold voltage (in Low frequency response case)?",
+      "question": "Which of these is a reason for threshold voltage shift in MOS capacitors?",
       "answers": {
-        "a": "Depletion width keeps on increasing with same proportion",
-        "b": "Depletion width decreases",
-        "c": "Depletion region is eliminated",
-        "d": "Depletion width more of less remain constant"
+        "a": "Fixed oxide charges",
+        "b": "Electron-hole recombination",
+        "c": "Gate length reduction",
+        "d": "Channel length modulation"
       },
       "explanations": {
-        "a": "Incorrect. No, think what happens at Vth",
-        "b": "incorrect! No, think what happens at Vth.",
-        "c": "Incorrect.No, think what happens at Vth .",
-        "d": "Yes, as inversion regions forms,the depletion region width become stagnant."
+        "a": "Correct. Fixed oxide charges alter electric field, shifting V<sub>T</sub>.",
+        "b": "Incorrect. Not relevant to threshold behavior.",
+        "c": "Incorrect. Affects MOSFET scaling, not V<sub>T</sub> in a cap.",
+        "d": "Incorrect. That’s a MOSFET behavior, not capacitor."
       },
-      "correctAnswer": "d",
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In a MOS capacitor, increasing the substrate doping concentration will:",
+      "answers": {
+        "a": "Reduce the threshold voltage",
+        "b": "Increase the threshold voltage",
+        "c": "Have no effect on threshold voltage",
+        "d": "Eliminate the depletion region"
+      },
+      "explanations": {
+        "a": "Incorrect. Higher doping requires more voltage to invert.",
+        "b": "Correct. Higher doping increases 2φ<sub>F</sub> and charge needed for inversion, thus increasing V<sub>T</sub>.",
+        "c": "Incorrect. V<sub>T</sub> is sensitive to substrate doping.",
+        "d": "Incorrect. Depletion region always forms before inversion."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What effect does a negative fixed charge in the oxide have on the MOS threshold voltage?",
+      "answers": {
+        "a": "It increases the threshold voltage",
+        "b": "It decreases the threshold voltage",
+        "c": "It has no effect",
+        "d": "It changes the substrate doping type"
+      },
+      "explanations": {
+        "a": "Incorrect. Negative charges attract positive charges in the semiconductor, reducing the V<sub>T</sub>.",
+        "b": "Correct. Negative oxide charge aids inversion, reducing the threshold voltage.",
+        "c": "Incorrect. It directly influences surface potential.",
+        "d": "Incorrect. Doping type is not altered by oxide charges."
+      },
+      "correctAnswer": "b",
       "difficulty": "advanced"
     }
   ]
