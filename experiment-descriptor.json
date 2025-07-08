@@ -1,6 +1,6 @@
 {
   "unit-type": "lu",
-  "label": "MOS Capacitors",
+  "label": "",
   "basedir": ".",
   "LaTeXinMD": true,
   "code-assessment": {
@@ -8,7 +8,6 @@
     "languages": ["javascript"],
     "position": 5
   },
-  "services": [],
   "service-worker": "/path/to/service-worker.js",
   "units": [
     {
@@ -29,19 +28,11 @@
       "content-type": "assesment"
     },
     {
-      "target": "procedure.html",
-      "source": "procedure.md",
-      "label": "Procedure",
-      "unit-type": "task",
-      "content-type": "text"
-    },
-    {
       "target": "simulation.html",
-      "source": "simulation/index.html",
+      "source": "simulation/test.html",
       "label": "Simulation",
       "unit-type": "task",
-      "content-type": "simulation",
-      "additional-sources": []
+      "content-type": "simulation"
     },
     {
       "target": "posttest.html",
@@ -49,6 +40,13 @@
       "label": "Posttest",
       "unit-type": "task",
       "content-type": "assesment"
+    },
+    {
+      "target": "didyouknow_Moscap.html",
+      "source": "simulation/didyouknow_Moscap.html",
+      "label": "Fact Vault",
+      "unit-type": "task",
+      "content-type": "simulation"
     },
     {
       "target": "references.html",
