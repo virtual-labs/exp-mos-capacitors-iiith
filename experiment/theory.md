@@ -1,6 +1,4 @@
-# **MOS Capacitor: A Detailed Overview**
 
-## **Introduction**  
 A **MOS (Metal-Oxide-Semiconductor) capacitor** is one of the fundamental building blocks in semiconductor devices and forms the basis of MOSFETs (Metal-Oxide-Semiconductor Field-Effect Transistors). It consists of a metal gate, an insulating oxide layer, and a semiconductor substrate. Understanding the MOS capacitor is critical to grasp modern electronic device operation.
 
 ---
