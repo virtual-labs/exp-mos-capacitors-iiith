@@ -1964,7 +1964,7 @@
                     explanations: {
                         blank1: "Cd is the depletion capacitance that affects subthreshold behavior"
                     },
-                    hint: "Subthreshold slope depends on thermal voltage and capacitance coupling"
+                    hint: "The formula is: S = (kT/q) × ln(10) × (1 + Cd/Cox). The missing term is the depletion capacitance. This shows how capacitance coupling affects subthreshold behavior."
                 },
                 {
                     text: "Channel length modulation causes the effective channel length to {blank1} with increasing drain voltage, resulting in {blank2} output resistance.",
@@ -2094,10 +2094,10 @@
                 },
                 {
                     problem: "The subthreshold slope at room temperature (300K) with Cox/Cd = 3 is {blank1} mV/decade",
-                    answers: { blank1: "86" },
+                    answers: { blank1: "80" },
                     tolerance: 5,
                     explanation: "S = (kT/q) × ln(10) × (1 + Cd/Cox) = 60 × (1 + 1/3) = 80 mV/decade",
-                    hint: "Use the subthreshold slope formula with thermal voltage at 300K"
+                    hint: "Use the subthreshold slope formula with thermal voltage at 300K. Remember: at room temperature, kT/q × ln(10) ≈ 60 mV/decade"
                 },
                 {
                     problem: "For a MOSFET with W = 10 μm, L = 1 μm, μn = 400 cm²/V·s, and Cox = 3.45 nF/cm², the transconductance parameter β is {blank1} μA/V²",
@@ -2147,6 +2147,12 @@
             initializeChallengeAnswers();
             generateChallengeContent();
             updateChallengeStats();
+            
+            // Start guided tour automatically on first visit
+            // Users can skip or close it if they want
+            setTimeout(() => {
+                startGuidedTour();
+            }, 1000); // Small delay to ensure page is fully loaded
         });
 
         function setupEventListeners() {

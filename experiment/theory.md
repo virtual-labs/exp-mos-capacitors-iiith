@@ -24,14 +24,14 @@ The MOS capacitor operation depends on the gate voltage (V<sub>gs</sub>)
 
 ### **1. Accumulation**  
 Accumulation occurs in a Metal-Oxide-Semiconductor (MOS) capacitor when a voltage is applied to the gate such that it attracts majority carriers to the semiconductor-oxide interface. This happens when the gate voltage (Vgb with respect to body/substrate voltage​) is more negative for a p-type semiconductor or more positive for an n-type semiconductor
-- **Condition**: V<sub>gb</sub> < 0 for p-type substrate and V<sub>gb</sub> > 0 for n-type substrate.
+- **Condition**: Accumulation occurs when the gate voltage attracts majority carriers to the oxide–semiconductor interface (negative gate voltage for p-type substrate and positive gate voltage for n-type substrate).
 - **Effect**: Majority carriers (holes in p-type and electrons in n-type) accumulate below the oxide-semiconductor interface
 - **Characteristics**: Maximum capacitance between gate and substrate, equal to Cox
 
 ### **2. Flat-band**
 The flat-band voltage (V<sub>fb</sub>) in a Metal-Oxide-Semiconductor (MOS) capacitor is the voltage applied to the gate that ensures the energy bands in the semiconductor are flat, meaning there is no band bending at the semiconductor-oxide interface. This condition occurs when there is no net charge in the semiconductor, and the surface potential ϕs(potential of semiconductor just under the oxide) is zero.
 - **Condition**: V<sub>gb</sub> = V<sub>fb</sub>
-- **Effect**: No band bending, no net charge in semiconductor
+- **Effect**: No band bending, no space-charge region exists in the semiconductor; however, fixed oxide charges or interface charges may still be present
 - **Characteristics**: Represents the reference point for voltage measurements
 
 ### **3. Depletion**  
@@ -46,11 +46,68 @@ The flat-band voltage (V<sub>fb</sub>) in a Metal-Oxide-Semiconductor (MOS) capa
 - **Effect**: 
   - Strong band bending attracts minority carriers
   - Forms an inversion layer of minority carriers from substrate of electrons (for p-type) and holes (for n-type substrate).
-  -At inversion, magnitude of carrier concentration in version layer is same as the majority carrier in the bulk.
+  - At inversion, magnitude of carrier concentration in inversion layer is same as the majority carrier in the bulk.
   - Depletion width reaches maximum
 - **Characteristics**:
   - Low frequency: Capacitance returns to Cox
-  - High frequency: Capacitance remains at minimum due to minority carrier response limitations
+  - High frequency: Capacitance remains at its minimum at high frequency because minority carriers cannot respond fast enough to the AC signal, so only the depletion layer contributes
+
+---
+
+## **Capacitance-Voltage (C-V) Characteristics**
+
+The C-V curve is one of the most important characterization tools for understanding MOS capacitor behavior. It shows how the total capacitance varies with applied gate voltage and reveals the different operating regions.
+
+![C-V Characteristic Curve](images/cv_curve.png)
+
+### **Understanding the C-V Curve**
+
+The C-V characteristic curve displays three distinct regions corresponding to the operating modes:
+
+#### **1. Accumulation Region (V<sub>G</sub> < V<sub>fb</sub>)**
+- **Capacitance**: C<sub>tot</sub> ≈ C<sub>ox</sub> (maximum capacitance)
+- The majority carriers accumulate at the oxide-semiconductor interface
+- The total capacitance is approximately equal to the oxide capacitance since the accumulation layer acts like a metal plate
+- Both low-frequency (LF) and high-frequency (HF) curves coincide in this region
+
+#### **2. Depletion Region (V<sub>fb</sub> < V<sub>G</sub> < V<sub>th</sub>)**
+- **Capacitance**: Decreases as depletion width increases
+- The capacitance follows: C<sub>tot</sub> = (C<sub>ox</sub> × C<sub>dep</sub>)/(C<sub>ox</sub> + C<sub>dep</sub>)
+- As gate voltage increases, the depletion region widens, causing the depletion capacitance C<sub>dep</sub> to decrease
+- This creates the characteristic dip in the C-V curve
+- Point B represents the minimum capacitance C<sub>min</sub> at the onset of inversion
+
+#### **3. Inversion Region (V<sub>G</sub> > V<sub>th</sub>)**
+- **Low Frequency (LF)**: Capacitance rises back to C<sub>ox</sub>
+  - Minority carriers can follow the AC signal
+  - The inversion layer acts as a conducting plate
+  - Total capacitance returns to oxide capacitance value
+  
+- **High Frequency (HF)**: Capacitance remains at C<sub>min</sub>
+  - Minority carriers cannot respond fast enough to the AC signal
+  - Only the depletion capacitance contributes
+  - The inversion layer effectively doesn't participate in the AC response
+  
+- **Deep Depletion (DD)**: 
+  - Occurs with very fast voltage sweeps or pulsed measurements
+  - Minority carriers don't have time to form the inversion layer
+  - Depletion region continues to widen beyond the equilibrium value
+  - Capacitance continues to decrease slightly
+
+### **Key Parameters from C-V Curves**
+
+1. **Flat-band Voltage (V<sub>fb</sub>)**: Where the bands become flat, marking the transition from accumulation to depletion
+2. **Threshold Voltage (V<sub>th</sub>)**: Where strong inversion begins, marked by the minimum capacitance point
+3. **Oxide Capacitance (C<sub>ox</sub>)**: Determined from the accumulation region plateau
+4. **Minimum Capacitance (C<sub>min</sub>)**: Provides information about maximum depletion width and doping concentration
+
+### **Applications of C-V Measurements**
+
+- Extracting oxide thickness and dielectric constant
+- Determining substrate doping concentration
+- Identifying interface trap density
+- Measuring flat-band voltage and threshold voltage
+- Quality control in semiconductor manufacturing
 
 ---
 ![](images/band.png)  
