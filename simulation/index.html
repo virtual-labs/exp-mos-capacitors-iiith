@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>MOS Capacitor Interactive Quiz</title> -->
+	<link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+    
+</head>
+<body>
+  <div class="column">
+    <div class="v-tabs">
+        <ul>
+
+            <li id="Task1"  onclick="window.location.href = 'match.html';">
+                <a>
+                    Matching exercise
+                </a>
+            </li>
+            <li  id="Task2" class="is-active">
+                <a>
+                    Regions of graphs
+                </a>
+            </li>
+          
+        </ul>
+    </div>
+    <div class="container">
+      <div class="main-content">
+        
+        
+        <div>
+      
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          
+          <p class="question-header"></p>
+           <div>
+            <div  class="container">
+              <div class="vcontain">
+  
+                <p class="v-datalist-title" style="text-align: center;">ARROW BANK</p>
+                <div class="labels-container" >
+              </div>
+             </div>
+          <div class="graph-container">
+            <svg class="cv-curve" viewBox="0 0 600 400">
+              <!-- Axes -->
+              <line x1="50" y1="350" x2="550" y2="350" stroke="black" stroke-width="2"/>
+              <line x1="50" y1="50" x2="50" y2="350" stroke="black" stroke-width="2"/>
+              
+              <!-- Axis labels -->
+              <text x="300" y="390" text-anchor="middle">Gate Voltage (V)</text>
+              <text x="20" y="200" text-anchor="middle" transform="rotate(-90, 20, 200)">Capacitance (C)</text>
+              
+              <!-- CV curve will be updated dynamically -->
+              <path class="curve-path" fill="none" stroke="black" stroke-width="3"/>
+              
+              <!-- Threshold voltage line (will be shown when needed) -->
+              <line class="threshold-line" x1="0" y1="0" x2="0" y2="0"/>
+              
+              <!-- VTH label (will be shown when needed) -->
+              <text class="vth-label" x="0" y="0">VTH</text>
+            </svg>
+            
+            <div class="drop-zones"></div>
+          </div>
+          
+          <div class="button-container">
+            <button class="check-button">Check Answers</button>
+            <button class="next-button">Next Question</button>
+  
+          <div class="feedback"></div>
+          </div>
+          
+        </div>
+      </div>
+   
+      </div>
+    </div>
+  
+  </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+   <script src="./js/main.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+</body>
+</html>

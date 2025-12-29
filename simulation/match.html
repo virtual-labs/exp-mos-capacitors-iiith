@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PN Junction Matching Exercise</title>
+    <link rel="stylesheet" href="./css/match.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+  </head>
+  <body>
+    <div class="header">
+    </div>
+
+    <!-- <div class="navigation">
+      <a href="index.html" class="active">Matching Exercise</a>
+      <a href="bias.html">Bias Labeling</a>
+    </div> -->
+    <div class="column">
+      <div class="v-tabs">
+          <ul>
+
+              <li id="Task1" class="is-active" >
+                  <a>
+                      Matching exercise
+                  </a>
+              </li>
+              <li  id="Task2" onclick="window.location.href = 'index.html';">
+                  <a>
+                      Regions of graphs
+                  </a>
+              </li>
+            
+          </ul>
+      </div>
+  </div>
+    <div class="content">
+      <h2 class="v-datalist-title">PN Junction Matching Exercise</h2>
+      <p>
+        Connect each concept with its correct description by clicking a term and
+        then its matching definition.
+      </p>
+      <br>
+      <div class="container">
+        <div class="questions">
+          <div class="question" data-id="1">Accumulation</div>
+          <div class="question" data-id="2">Depletion</div>
+          <div class="question" data-id="3">Inversion</div>
+          <div class="question" data-id="4">Deep inversion</div>
+          <div class="question" data-id="5">Weak</div>
+        </div>
+
+        <div class="answers">
+          <div class="answer" data-id="5">
+            Minority carriers at very sparse concentration and minimal thickness (few atoms tick, few nm)
+          </div>
+          <div class="answer" data-id="2">
+            Immobile ionized dopant atoms at density same a doping density (ND or NA) and width increasing till applied voltage is less than threshold voltage
+          </div>
+          <div class="answer" data-id="3">
+            Minority carriers at same concentration (magnitude) as bulk/substrate and minimal thickness (few atoms tick, few nm)
+          </div>
+          <div class="answer" data-id="1">
+            Majority carriers at much higher concentration than doping and minimal thickness (few atoms tick, few nm)
+          </div>
+          <div class="answer" data-id="4">
+            Minority carriers at much higher concentration than magnitude of bulk/substrate and minimal thickness (few atoms tick, few nm)
+          </div>
+          <div class="answer" data-id="7">
+            Minority carriers at very sparse concentration and minimal thickness (few atoms tick, few nm)
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="checkBtn" class="check-button">Check Answers</button>
+        <button id="resetBtn" class="next-button">Reset Exercise</button>
+      </div>
+      <div id="score"></div>
+
+      <canvas id="drawCanvas"></canvas>
+    </div>
+
+    <script src="./js/match.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+  </body>
+</html>

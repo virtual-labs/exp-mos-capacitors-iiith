@@ -1,0 +1,12 @@
+
+/home/runner/work/exp-mos-capacitors-iiith/exp-mos-capacitors-iiith/experiment/simulation/js/main.js
+  114:46  warning  'e' is defined but never used  no-unused-vars
+  124:47  warning  'e' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-mos-capacitors-iiith/exp-mos-capacitors-iiith/experiment/simulation/mobile-detection.js
+  283:7   warning  'mobileDetection' is assigned a value but never used  no-unused-vars
+  286:38  warning  'module' is not defined                               no-undef
+  287:3   warning  'module' is not defined                               no-undef
+
+✖ 5 problems (0 errors, 5 warnings)
+

@@ -1,0 +1,2 @@
+
+The aim of the experiment is to enhance the understanding of MOS capacitors through various experiments for users. The experiment is designed to be simple and easy to follow, with clear instructions and results.

@@ -1,0 +1,160 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What does the 'oxide' in a MOS capacitor typically refer to?",
+      "answers": {
+        "a": "Silicon Nitride",
+        "b": "Silicon Dioxide",
+        "c": "Gallium Arsenide",
+        "d": "Metal Oxide"
+      },
+      "explanations": {
+        "a": "Incorrect. Silicon Nitride is used in other semiconductor applications, not as the insulator in MOS caps.",
+        "b": "Correct. Silicon Dioxide (SiO₂) acts as the insulating layer between the gate and the semiconductor.",
+        "c": "Incorrect. Gallium Arsenide is a semiconductor material.",
+        "d": "Incorrect. The term 'oxide' refers specifically to SiO₂ in this context."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What region forms in a p-type substrate under a positive gate voltage in a MOS capacitor?",
+      "answers": {
+        "a": "Accumulation",
+        "b": "Depletion",
+        "c": "Inversion",
+        "d": "No region forms"
+      },
+      "explanations": {
+        "a": "Incorrect. Accumulation happens when holes are attracted by a negative gate voltage.",
+        "b": "Incorrect. Depletion forms under moderate positive voltage before inversion sets in.",
+        "c": "Correct. Strong positive gate voltage attracts electrons, forming an inversion layer.",
+        "d": "Incorrect. A region always forms based on applied gate voltage."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which terminal controls the operation of the MOS capacitor?",
+      "answers": {
+        "a": "Source",
+        "b": "Drain",
+        "c": "Gate",
+        "d": "Body"
+      },
+      "explanations": {
+        "a": "Incorrect. The source and drain are used in MOSFETs, not in a basic MOS capacitor setup.",
+        "b": "Incorrect. The drain is not part of the MOS capacitor.",
+        "c": "Correct. The gate voltage determines the electric field and operation mode (accumulation, depletion, inversion).",
+        "d": "Incorrect. The body/substrate supports the formation of regions but doesn't control it."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "What condition defines the threshold voltage (V<sub>T</sub>) in a MOS capacitor?",
+      "answers": {
+        "a": "When accumulation begins",
+        "b": "When depletion ends",
+        "c": "When strong inversion begins",
+        "d": "When the oxide breakdown occurs"
+      },
+      "explanations": {
+        "a": "Incorrect. Accumulation happens at negative gate voltages in p-type.",
+        "b": "Incorrect. Threshold voltage defines the onset of inversion, not depletion end.",
+        "c": "Correct. V<sub>T</sub> is the gate voltage at which the inversion layer forms.",
+        "d": "Incorrect. Breakdown is a failure condition, unrelated to threshold voltage."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following increases the threshold voltage in a MOS capacitor?",
+      "answers": {
+        "a": "Increasing oxide thickness",
+        "b": "Decreasing substrate doping",
+        "c": "Applying a negative body bias (for nMOS)",
+        "d": "Using a metal with lower work function"
+      },
+      "explanations": {
+        "a": "Correct. A thicker oxide reduces gate control, requiring more voltage to invert.",
+        "b": "Incorrect. Lower doping usually reduces threshold voltage.",
+        "c": "Incorrect. A negative body bias lowers the threshold for nMOS.",
+        "d": "Incorrect. Lower work function metal shifts the flatband voltage, lowering V<sub>T</sub>."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens to the surface potential as the gate voltage increases positively in a p-type MOS cap?",
+      "answers": {
+        "a": "It becomes more negative",
+        "b": "It remains constant",
+        "c": "It increases positively",
+        "d": "It decreases first and then increases"
+      },
+      "explanations": {
+        "a": "Correct. Positive gate voltage repels holes and attracts electrons, making the surface potential more negative.",
+        "b": "Incorrect. It changes with gate voltage.",
+        "c": "Incorrect. Positive gate doesn't make the potential more positive at the surface in p-type.",
+        "d": "Incorrect. It monotonically decreases until inversion."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "The flatband voltage in a MOS structure is defined when:",
+      "answers": {
+        "a": "Surface potential is zero and no charge is in the oxide",
+        "b": "Depletion region just starts to form",
+        "c": "Gate voltage equals threshold voltage",
+        "d": "Inversion layer is formed"
+      },
+      "explanations": {
+        "a": "Correct. Flatband voltage is when there's no band bending — surface potential is zero.",
+        "b": "Incorrect. That describes onset of depletion.",
+        "c": "Incorrect. Threshold voltage is typically different from flatband.",
+        "d": "Incorrect. Inversion occurs beyond threshold, not flatband."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In a MOS cap, how does increasing temperature affect the threshold voltage (V<sub>T</sub>)?",
+      "answers": {
+        "a": "It increases due to higher carrier mobility",
+        "b": "It decreases due to reduction in built-in potential",
+        "c": "It remains constant",
+        "d": "It becomes undefined"
+      },
+      "explanations": {
+        "a": "Incorrect. Mobility decreases with temperature.",
+        "b": "Correct. Higher temperature lowers the built-in potential, hence reduces threshold voltage.",
+        "c": "Incorrect. Threshold voltage is temperature-dependent.",
+        "d": "Incorrect. It still exists and is calculable."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In strong inversion, what determines the majority carrier concentration at the surface?",
+      "answers": {
+        "a": "Substrate doping",
+        "b": "Oxide capacitance",
+        "c": "Surface potential equal to twice the Fermi potential",
+        "d": "Gate work function only"
+      },
+      "explanations": {
+        "a": "Incorrect. Doping sets the bulk properties but not inversion criteria.",
+        "b": "Incorrect. Capacitance affects field but not concentration directly.",
+        "c": "Correct. Strong inversion occurs when surface potential equals 2φ<sub>F</sub>, leading to surface minority carrier concentration matching bulk majority.",
+        "d": "Incorrect. Work function mismatch affects flatband, not inversion onset."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}
